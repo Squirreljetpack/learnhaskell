@@ -1,3 +1,5 @@
+-- Pattern matching works on constructors (normal or recursive), and 'a' or 3 which are also constructors
+
 sayMe :: (Integral a) => a -> String
 sayMe 1 = "One!"
 sayMe 2 = "Two!"

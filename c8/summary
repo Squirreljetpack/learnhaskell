@@ -1,0 +1,6 @@
+
+
+types come in concrete and polymorphic flavors
+    They are made up of a value constructor (templates in C++) and value constructors
+typeclasses are constraints like Eq and Num
+instances implement typeclass for a type

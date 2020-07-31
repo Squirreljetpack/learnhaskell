@@ -1,6 +1,7 @@
 import qualified Data.Map as Map
 import qualified Data.Set as Set
 
+k0 = Map.empty
 k1 = Map.fromList [("betty","555-2938"),("bonnie","452-2928"),("lucille","205-2928")]
 k2 = Map.insert "anne" "186-3037" k1
 k3 = Map.size k2

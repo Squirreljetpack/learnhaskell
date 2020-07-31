@@ -7,3 +7,5 @@ incDoubleSmall x = (if x > 100 then x else x*2) + 1
 
 inf = 92 `div` 10
 -- Surround a function with backticks to use it as infix
+
+-- :? shows list of interpreter commands
