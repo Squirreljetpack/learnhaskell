@@ -19,3 +19,4 @@ t5 = True'>False'
 t6 = Just 3 `compare` Just 2
 
 data Day = Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday deriving (Eq, Ord, Show, Read, Bounded, Enum)
+[minBound .. maxBound] :: [Day]

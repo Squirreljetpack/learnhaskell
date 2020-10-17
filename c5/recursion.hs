@@ -23,3 +23,8 @@ elem' a [] = False
 elem' a (x:xs)
     | a == x = True
     | otherwise = a `elem'` xs
+
+foldr' :: (a -> b -> b) -> b -> [a] -> [b] -> [b]
+foldrh' f i [] [] = [f i]
+foldrh' f i xs [] = foldr' (f $ last xs $ i)"hi" 
+foldl' ::

@@ -25,4 +25,4 @@ k1 = 3 :: Int
 k2 = 0::Int
 t1 = yesno k1
 t2 = yesno $ Just k1
-t2 = yesno $ Just k2
+t3 = yesno $ Just k2

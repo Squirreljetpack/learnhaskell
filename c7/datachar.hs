@@ -9,7 +9,7 @@ p5 = all isAscii "Hello123"
 p6 = words "hey guys its me"
 
 k1 =  map generalCategory " \t\nA9?|"
--- k2 = digitToInt('a') maps to 0-9 a-z
+-- k2 = digitToInt('a') maps to 9+1
 k2 = ord 'a'
 k3 = chr 97
 

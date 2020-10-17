@@ -1,6 +1,10 @@
 sum' :: (Num a) => [a] -> a
 sum' xs = foldl (\acc x -> acc + x) 0 xs
 
+head' :: [a] -> a
+head' = foldr1 (\x _ -> x)
+-- the accumulator is the second argument
+
 elem' :: (Eq a) => a -> [a] -> Bool
 elem' y ys = foldl (\acc x -> if x==y then True else acc) False ys
 
