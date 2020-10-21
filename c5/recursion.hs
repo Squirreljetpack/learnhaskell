@@ -7,7 +7,7 @@ take' :: (Num i, Ord i) => i -> [a] -> [a]
 take' n _
     | n <=0 = []
 take' _ [] = []
-take' n (x:xs) = take' (n-1) xs
+take' n (_:xs) = take' (n-1) xs
 
 reverse' :: [a] -> [a]
 reverse' [] = []
@@ -19,12 +19,8 @@ zip' [] _= []
 zip (x:xs) (y:ys) = (x, y):zip' xs ys
 
 elem' :: (Eq a) => a -> [a] -> Bool
-elem' a [] = False
+elem' _ [] = False
 elem' a (x:xs)
     | a == x = True
     | otherwise = a `elem'` xs
 
-foldr' :: (a -> b -> b) -> b -> [a] -> [b] -> [b]
-foldrh' f i [] [] = [f i]
-foldrh' f i xs [] = foldr' (f $ last xs $ i)"hi" 
-foldl' ::

@@ -1,5 +1,4 @@
 import System.Environment
-import System.IO
 import System.IO.Error
 
 -- Common

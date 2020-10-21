@@ -1,3 +1,5 @@
+-- use | runhaskell intro.hs to pipe input into compiled programs
+
 -- putStrLn :: String -> IO ()
 -- putStr is a recursive implementation of putChar
 -- getLine :: IO String
