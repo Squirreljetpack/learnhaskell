@@ -20,6 +20,8 @@ infixr 5 .++
 Empty .++ ys = ys
 (x :-: xs) .++ ys = x :-: (xs .++ ys)
 
+-- While on the topic of infix operators, this is a section (+3) := x -> x+y
+
 data Tree a = EmptyTree | Node a (Tree a) (Tree a) deriving (Show, Read, Eq)
 
 treeInsert :: (Ord a) => a -> Tree a -> Tree a

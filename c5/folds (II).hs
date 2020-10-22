@@ -1,6 +1,6 @@
 import Prelude hiding (foldr, foldl)
 import Data.List.Ordered
-
+-- use stack ghci --ghci-options="+RTS -K2M"
 
 -- dropLast :: Int -> [a] -> [a]
 -- dropLast n ls = go (drop n ls) ls
@@ -20,7 +20,7 @@ foldr k z = go
 
 -- stackoverflow because + is strict in both arguments
 sum1 = foldr (+) 0
-try1 = sum1 [1..10000000]
+try1 = sum1 [1..1000000]
 
 foldl k = go
     where
@@ -31,7 +31,7 @@ foldl k = go
 -- stackoverflow because of lazy reduction strategy.
 -- Problem arises at evaluating z100000000 = z9999999 + 100000000, pushing 100000000, 9999999... on the stack
 sum2 = foldl (+) 0
-try2 = sum2 [1..10000000]
+try2 = sum2 [1..1000000]
 
 foldl' k = go
     where
@@ -41,7 +41,7 @@ foldl' k = go
 
 -- Works
 sum3 = foldl' (+) 0
-try3 = sum3 [1..10000000]
+try3 = sum3 [1..1000000]
 
 -- However if the combining function is lazy in the first argument, foldl may work where foldl' hits an exception
 

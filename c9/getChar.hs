@@ -22,7 +22,7 @@ main = do
 --         rawStartingHeight <- getLine
 --         ...
 
--- same
+-- another version
 -- import Control.Monad
 -- main = do
 --      c <- getChar
@@ -30,7 +30,7 @@ main = do
 --          putChar c
 --          main
 
--- forever
+-- forever version
 -- import Control.Monad
 -- import Data.Char
 -- main = forever $ do

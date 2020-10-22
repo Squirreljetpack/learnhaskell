@@ -4,7 +4,7 @@ main = do
     if null line
         then return ()
         else do
-            PutStrLn $ reverseWords line
+            putStrLn $ reverseWords line
             main
     
 reverseWords :: String -> String

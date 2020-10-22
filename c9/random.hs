@@ -13,3 +13,14 @@ threeCoins gen = let
 -- The following give the same result each time
 t0 = randoms (mkStdGen 11) :: [Int]
 t1 = randomR (1 :: Int ,6) (mkStdGen 359353)
+
+main = do
+    gen <- getStdGen
+    putStrLn $ take 20 (randomRs ('a','z') gen)
+    gen' <- newStdGen
+    -- yields a new one and updates getStdGen
+    putStrLn $ take 20 (randomRs ('a','z') gen')
+    print t0
+    print t1
+    print threeCoins gen
+    print threeCoins gen

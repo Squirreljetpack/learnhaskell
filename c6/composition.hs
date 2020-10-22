@@ -10,7 +10,7 @@ k3 = map ($ 3) [(4+), (10*), (^2), sqrt]
 -- (.) :: (b -> c) -> (a -> b) -> a -> c
 -- f . g = \x -> f (g x)
 
-map (negate . abs) [-5,4,3,-2]
+j0 = map (negate . abs) [-5,4,3,-2]
 
 j1 = sum(replicate 5 (max 6.7 8.9))
 j2 = sum . replicate 5 . max 6.7 $ 8.9
